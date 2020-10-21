@@ -74,8 +74,13 @@ form button:hover {
     transition: all 0.5s ease;
 }
 
-.todo li {
+.todo input {
     flex: 1;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    margin: 0.75rem;
+    align-content: center;
 }
 
 .trash-btn,

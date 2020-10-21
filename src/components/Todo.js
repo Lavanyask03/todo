@@ -3,12 +3,12 @@ import React from 'react';
 const Todo = ({ text, todoItem, setTodos, todos }) => {
 
 	const deleteHandler = () => {
-		console.log(todoItem)
+		//console.log(todoItem)
 		setTodos(todos.filter((elem) => elem.id !== todoItem.id));
 	}
 
 	const checkHandler = () => {
-		console.log(todoItem)
+		//console.log(todoItem)
 		setTodos(todos.map((elem) => {
 			if (elem.id === todoItem.id) {
 				return {
@@ -19,11 +19,23 @@ const Todo = ({ text, todoItem, setTodos, todos }) => {
 		}));
 	}
 
+	const editHandler = (event) => {
+		//console.log(todoItem)
+		setTodos(todos.map((elem) => {
+			if (elem.id === todoItem.id) {
+				return {
+					...elem, text: event.target.value
+				}
+			}
+			return elem;
+		}));
+	}
+
 	return (
 		<div className = 'todo'>
-			<li className = {`todoItem ${ todoItem.completed ? "check" : ""}`}> {text} </li>
+			<input type = 'text' onChange = {editHandler} className = {`todoItem ${ todoItem.completed ? "check" : ""}`} value = {text} />
 			<button onClick = {checkHandler} className = 'check-btn'>
-				<i className = 'fas fa-check'> </i> 
+				<i className = 'fas fa-check'> </i>
 			</button>
 			<button onClick = {deleteHandler} className = 'trash-btn'>
 				<i className = 'fas fa-trash'> </i> 

@@ -15,12 +15,8 @@ function App() {
   },[]);
 
   useEffect(() => {
-    filterHandler();
-    saveLocalTodos();
-  },[todos, status]);
-
-  const filterHandler = () => {
-    switch (status) {
+    function filterHandler() {
+      switch (status) {
       case "checked": setFilteredTodos(todos.filter(todo => todo.completed === true));
                       break;
       case "unchecked": setFilteredTodos(todos.filter(todo => todo.completed === false));
@@ -28,11 +24,15 @@ function App() {
       default: setFilteredTodos(todos);
                       break;
     }
-  }
+    }
+    filterHandler();
 
-  const saveLocalTodos = () => {
+    function saveLocalTodos() {
       localStorage.setItem("todos", JSON.stringify(todos));
-  }
+    }
+    saveLocalTodos();
+
+  },[todos, status]);
 
   const getLocalTodos = () => {
     if (localStorage.getItem("todos") === null ) {

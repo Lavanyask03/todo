@@ -4,7 +4,7 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
 
 	const inputTextHandler = (event) => {
 		event.preventDefault();
-		console.log(event.target.value);
+		//console.log(event.target.value);
 		setInputText(event.target.value);
 	}
 
@@ -14,7 +14,7 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
 			...todos,
 			{ text: inputText, completed: false, id: Math.random()*100 },
 		]);
-		console.log(todos);
+		//console.log(todos);
 		setInputText('');
 	}
 

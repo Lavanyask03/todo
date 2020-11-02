@@ -83,6 +83,12 @@ form button:hover {
     align-content: center;
 }
 
+.todo input:focus {
+  outline: none ;
+  -webkit-appearance:none;
+  border-bottom: 2px solid gray;
+}
+
 .trash-btn,
 .check-btn {
     background: #66ff33;

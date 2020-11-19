@@ -1,6 +1,11 @@
 # About
 A simple todo app in ReactJS to add, delete, edit, check and uncheck todos. The todos will be stored in the Local Storage.
 
+# Screenshots
+![screenshot1](https://github.com/Lavanyask03/todo/blob/master/screenshots/todo-app-1.png?raw=true)
+
+![screenshot2](https://github.com/Lavanyask03/todo/blob/master/screenshots/todo-app-2.png?raw=true)
+
 # Prerequisites
 * Node.js
 * npm

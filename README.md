@@ -1,5 +1,5 @@
 # About
-A simple todo app in ReactJS to add, delete, edit, check and uncheck todos. The todos will be stored in the Local Storage.
+A simple todo app in ReactJS to add, delete, edit, check and uncheck todos. The todos will be stored in the Local Storage.<br> Try it out [here](https://lavanya-todo.herokuapp.com/).
 
 # Screenshots
 ![screenshot1](https://github.com/Lavanyask03/todo/blob/master/screenshots/todo-app-1.png?raw=true)

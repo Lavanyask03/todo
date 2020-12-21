@@ -21,14 +21,17 @@ const Todo = ({ text, todoItem, setTodos, todos }) => {
 
 	const editHandler = (event) => {
 		//console.log(todoItem)
-		setTodos(todos.map((elem) => {
-			if (elem.id === todoItem.id) {
-				return {
-					...elem, text: event.target.value
+		// only unchecked todos should be editable
+		if (!todoItem.completed) {
+			setTodos(todos.map((elem) => {
+				if (elem.id === todoItem.id) {
+					return {
+						...elem, text: event.target.value
+					}
 				}
-			}
-			return elem;
-		}));
+				return elem;
+			}));
+		}
 	}
 
 	return (

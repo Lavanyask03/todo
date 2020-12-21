@@ -10,10 +10,13 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
 
 	const submitTodoHandler = (event) => {
 		event.preventDefault();
-		setTodos([
-			...todos,
-			{ text: inputText, completed: false, id: Math.random()*100 },
-		]);
+		// add the todo only if it is not empty
+		if (inputText.trim()) {
+			setTodos([
+				...todos,
+				{ text: inputText, completed: false, id: Math.random()*100 },
+			]);
+		}
 		//console.log(todos);
 		setInputText('');
 	}
